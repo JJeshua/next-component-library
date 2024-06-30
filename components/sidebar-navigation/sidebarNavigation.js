@@ -28,24 +28,6 @@ const SidebarNavigation = ({ ...rest }) => {
               icon={faHouse}
               sidebarNavigationState={sidebarNavigation}
             />
-            <a
-              href="#"
-              className="block p-2 rounded-md text-gray-700 hover:bg-gray-200"
-            >
-              About
-            </a>
-            <a
-              href="#"
-              className="block p-2 rounded-md text-gray-700 hover:bg-gray-200"
-            >
-              Services
-            </a>
-            <a
-              href="#"
-              className="block p-2 rounded-md text-gray-700 hover:bg-gray-200"
-            >
-              Contact
-            </a>
           </nav>
         </div>
       </div>
