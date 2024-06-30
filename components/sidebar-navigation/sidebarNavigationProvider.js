@@ -14,7 +14,7 @@ export const useSidebarNavigation = () => useContext(SidebarNavigationContext);
  */
 export const SidebarNavigationProvider = ({ children }) => {
   const [sidebarNavigation, setSidebarNavigation] = useState({
-    collapsed: false,
+    sidebarNavigationCollapsed: false,
   });
 
   return (

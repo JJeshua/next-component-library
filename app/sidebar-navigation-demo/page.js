@@ -10,7 +10,11 @@ const Page = () => {
   return (
     <>
       <SidebarNavigationProvider>
-        <SidebarNavigation />
+        <div className="bg-stone-200 flex items-center justify-center w-screen h-screen p-8">
+          <div className="w-full h-full">
+            <SidebarNavigation />
+          </div>
+        </div>
       </SidebarNavigationProvider>
     </>
   );

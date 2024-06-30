@@ -1,3 +1,8 @@
-.sidebarNavigationWrapper {
-  
+.icon {
+  color: #444e5d;
+  transition: color 0.3s ease; /* Optional: Adds a smooth transition effect */
+}
+
+.icon:hover {
+  color: rgb(192 38 211); /* tailwindcss fuchsia 600 */
 }

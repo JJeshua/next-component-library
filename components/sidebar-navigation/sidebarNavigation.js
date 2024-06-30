@@ -13,20 +13,22 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons';
  * Sidebar navigation component. Accepts all props a div would accept.
  */
 const SidebarNavigation = ({ ...rest }) => {
-  const {sidebarNavigation} = useSidebarNavigation();
+  const { sidebarNavigation } = useSidebarNavigation();
   return (
     <>
-      <div className="fixed top-0 left-0 h-full w-64 bg-gray-100 shadow-lg overflow-y-auto z-50">
+      <div className="relative top-0 left-0 h-full w-64 bg-gray-100 shadow-lg overflow-y-auto z-50">
         <div className="p-4">
           <nav className="space-y-2">
-            <div className="flex items-center p-2 rounded-md hover:bg-gray-200">
+            <div className="group flex items-center py-2 px-4 rounded-md hover:bg-blue-800 hover:text-slate-200 transition-colors duration-200">
               <FontAwesomeIcon
-                className="pr-2"
+                className="group-hover:text-inherit text-neutral-900 pr-2 transition-colors duration-200"
                 icon={faHouse}
-                style={{ color: '#444e5d' }}
               />
-              {!sidebarNavigation.collapsed && (
-                <a href="#" className="text-gray-700">
+              {!sidebarNavigation.sidebarNavigationCollapsed && (
+                <a
+                  href="#"
+                  className="group-hover:text-inherit text-neutral-900 transition-colors duration-200"
+                >
                   Home
                 </a>
               )}
