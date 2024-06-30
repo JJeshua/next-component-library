@@ -1,16 +1,17 @@
 'use client';
 import React from 'react';
 import {
-  useSidebarNavigations,
   SidebarNavigation,
+  SidebarNavigationProvider,
 } from '@/components/sidebar-navigation';
 // use tailwind css for styling
 
 const Page = () => {
-  const sidebarNavigations = useSidebarNavigations();
   return (
     <>
-      <SidebarNavigation />
+      <SidebarNavigationProvider>
+        <SidebarNavigation />
+      </SidebarNavigationProvider>
     </>
   );
 };

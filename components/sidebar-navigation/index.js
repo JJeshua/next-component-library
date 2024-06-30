@@ -2,7 +2,7 @@
 
 import {
   SidebarNavigationProvider,
-  useSidebarNavigations,
+  useSidebarNavigation,
 } from './sidebarNavigationProvider';
 import SidebarNavigation from './sidebarNavigation';
-export { SidebarNavigationProvider, useSidebarNavigations, SidebarNavigation };
+export { SidebarNavigationProvider, useSidebarNavigation, SidebarNavigation };
