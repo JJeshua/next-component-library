@@ -12,6 +12,8 @@ import {
   faBell,
   faGear,
   faUser,
+  faSquare,
+  faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { NavItemComponent } from './navItemComponent';
@@ -31,7 +33,20 @@ const SidebarNavigation = ({ ...rest }) => {
         <div className="p-4">
           <nav className="space-y-2">
             {/* Logo / header */}
-            <div></div>
+            <div className="flex items-center">
+              <FontAwesomeIcon
+                className="size-12 text-blue-700 pr-2"
+                icon={faSquare}
+              />
+              <div className="flex flex-col">
+                <text className="text-neutral-300">BVT </text>
+                <text className="text-sm text-neutral-500">Components</text>
+              </div>
+              <FontAwesomeIcon
+                className="size-4 text-neutral-500 ml-auto"
+                icon={faChevronLeft}
+              />
+            </div>
             <NavItemComponent
               title="Home"
               icon={faHouse}
