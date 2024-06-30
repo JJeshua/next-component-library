@@ -1,8 +1,7 @@
-.icon {
-  color: #444e5d;
-  transition: color 0.3s ease; /* Optional: Adds a smooth transition effect */
-}
-
-.icon:hover {
-  color: rgb(192 38 211); /* tailwindcss fuchsia 600 */
+.glass {
+  background: rgba(255, 255, 255, 0.048);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(122, 122, 122, 0.18);
 }
