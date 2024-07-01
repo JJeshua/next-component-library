@@ -22,30 +22,56 @@ import { NavItemComponent } from './navItemComponent';
  * Sidebar navigation component. Accepts all props a div would accept.
  */
 const SidebarNavigation = ({ ...rest }) => {
-  const { sidebarNavigation } = useSidebarNavigation();
+  const { sidebarNavigation, toggleCollapseSidebar } = useSidebarNavigation();
+
+  const _toggleCollapseSidebar = () => {
+    toggleCollapseSidebar();
+  };
+
   return (
     <>
       {/* Navbar wrapper and background */}
       <div
-        className={`${styles.glass} relative top-0 left-0 h-full w-64 overflow-y-auto z-50`}
+        className={`${styles.glass} relative top-0 left-0 h-full ${
+          !sidebarNavigation.sidebarNavigationCollapsed ? 'w-64' : 'w-fit'
+        } overflow-y-auto z-50`}
       >
         {/* Content wrapper */}
         <div className="p-4">
           <nav className="space-y-2">
             {/* Logo / header */}
-            <div className="flex items-center">
+            <div className="flex items-center mb-8">
               <FontAwesomeIcon
-                className="size-12 text-blue-700 pr-2"
+                className={`size-12 text-blue-700 ${
+                  !sidebarNavigation.sidebarNavigationCollapsed ? 'pr-2' : ''
+                }`}
                 icon={faSquare}
               />
-              <div className="flex flex-col">
-                <text className="text-neutral-300">BVT </text>
-                <text className="text-sm text-neutral-500">Components</text>
-              </div>
-              <FontAwesomeIcon
-                className="size-4 text-neutral-500 ml-auto"
-                icon={faChevronLeft}
-              />
+
+              <CSSTransition
+                in={!sidebarNavigation.sidebarNavigationCollapsed}
+                timeout={300}
+                classNames="collapse"
+                unmountOnExit
+              >
+                <div className="flex flex-col">
+                  <text className="text-neutral-300">BVT </text>
+                  <text className="text-sm text-neutral-500">Components</text>
+                </div>
+              </CSSTransition>
+
+              <CSSTransition
+                in={!sidebarNavigation.sidebarNavigationCollapsed}
+                timeout={300}
+                classNames="collapse"
+                unmountOnExit
+              >
+                <FontAwesomeIcon
+                  className="size-4 text-neutral-500 ml-auto"
+                  icon={faChevronLeft}
+                  onClick={() => _toggleCollapseSidebar()}
+                />
+              </CSSTransition>
             </div>
             <NavItemComponent
               title="Home"

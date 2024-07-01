@@ -17,9 +17,16 @@ export const SidebarNavigationProvider = ({ children }) => {
     sidebarNavigationCollapsed: false,
   });
 
+  const toggleCollapseSidebar = () => {
+    setSidebarNavigation((prevState) => ({
+      ...prevState,
+      sidebarNavigationCollapsed: !prevState.sidebarNavigationCollapsed,
+    }));
+  };
+
   return (
     <SidebarNavigationContext.Provider
-      value={{ sidebarNavigation, setSidebarNavigation }}
+      value={{ sidebarNavigation, toggleCollapseSidebar }}
     >
       {children}
     </SidebarNavigationContext.Provider>

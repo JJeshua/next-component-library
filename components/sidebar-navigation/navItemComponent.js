@@ -7,10 +7,14 @@ import styles from './sidebarNavigation.module.css';
 export const NavItemComponent = ({ title, icon, sidebarNavigationState }) => {
   return (
     <>
-      <div className={`glass ${styles.nav_item} flex items-center py-2 px-4 rounded-md transition-colors duration-75`}>
+      <div
+        className={`glass ${styles.nav_item} flex items-center py-2 px-4 rounded-md transition-colors duration-75`}
+      >
         {icon && (
           <FontAwesomeIcon
-            className="size-4 text-neutral-300 pr-2 transition-colors duration-75"
+            className={`size-5 text-neutral-300 ${
+              !sidebarNavigationState.sidebarNavigationCollapsed ? 'pr-2' : ''
+            } transition-colors duration-75`}
             icon={icon}
           />
         )}
