@@ -50,8 +50,13 @@ const SidebarNavigation = ({ ...rest }) => {
 
               <CSSTransition
                 in={!sidebarNavigation.sidebarNavigationCollapsed}
-                timeout={300}
-                classNames="collapse"
+                timeout={200}
+                classNames={{
+                  enter: styles['collapse-enter'],
+                  enterActive: styles['collapse-enter-active'],
+                  exit: styles['collapse-exit'],
+                  exitActive: styles['collapse-exit-active'],
+                }}
                 unmountOnExit
               >
                 <div className="flex flex-col">
@@ -62,8 +67,13 @@ const SidebarNavigation = ({ ...rest }) => {
 
               <CSSTransition
                 in={!sidebarNavigation.sidebarNavigationCollapsed}
-                timeout={300}
-                classNames="collapse"
+                timeout={200}
+                classNames={{
+                  enter: styles['collapse-enter'],
+                  enterActive: styles['collapse-enter-active'],
+                  exit: styles['collapse-exit'],
+                  exitActive: styles['collapse-exit-active'],
+                }}
                 unmountOnExit
               >
                 <FontAwesomeIcon
