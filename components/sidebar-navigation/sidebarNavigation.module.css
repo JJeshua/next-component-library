@@ -30,3 +30,24 @@
   transform: translateX(-20px);
   transition: opacity 300ms, transform 300ms;
 }
+
+.shrink-enter {
+  width: 256px;
+}
+.shrink-enter-active {
+  width: 85.6px;
+  transition: width 300ms;
+}
+.shrink-enter-done {
+  width: fit-content;
+}
+.shrink-exit {
+  width: fit-content;
+}
+.shrink-exit-active {
+  width: 256px;
+  transition: width 300ms;
+}
+.shrink-exit-done {
+  width: 256px;
+}
