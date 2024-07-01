@@ -77,7 +77,7 @@ const SidebarNavigation = ({ ...rest }) => {
                 unmountOnExit
               >
                 <FontAwesomeIcon
-                  className="size-4 text-neutral-500 ml-auto"
+                  className="cursor-pointer size-4 text-neutral-500 ml-auto"
                   icon={faChevronLeft}
                   onClick={() => _toggleCollapseSidebar()}
                 />

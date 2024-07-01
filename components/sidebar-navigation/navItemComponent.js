@@ -9,7 +9,7 @@ export const NavItemComponent = ({ title, icon, sidebarNavigationState }) => {
   return (
     <>
       <div
-        className={`glass ${styles.nav_item} flex items-center py-2 px-4 rounded-md transition-colors duration-75`}
+        className={`glass cursor-pointer ${styles.nav_item} flex items-center py-2 px-4 rounded-md transition-colors duration-75`}
       >
         {icon && (
           <FontAwesomeIcon
